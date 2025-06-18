@@ -7,8 +7,8 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_archive"></a> [archive](#provider\_archive) | 2.7.1 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.100.0 |
 
 ## Modules
 
@@ -45,7 +45,7 @@ No requirements.
 | <a name="input_enabled_outgoing_email_logs_cloudwatch"></a> [enabled\_outgoing\_email\_logs\_cloudwatch](#input\_enabled\_outgoing\_email\_logs\_cloudwatch) | Whether to enable the SES outgoing email logs on CloudWatch. | `bool` | `false` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment of the outgoing logs | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the outgoing logs | `string` | n/a | yes |
-| <a name="input_ses_identity_ids"></a> [ses\_identity\_ids](#input\_ses\_identity\_ids) | The list of the SES outgoing identities | `list(string)` | n/a | yes |
+| <a name="input_ses_identity_ids"></a> [ses\_identity\_ids](#input\_ses\_identity\_ids) | Map of SES identity IDs | `map(string)` | n/a | yes |
 
 ## Outputs
 
