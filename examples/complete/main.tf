@@ -3,7 +3,10 @@ module "main" {
 
   environment      = "dev"
   name             = replace("example1.com", ".", "_")
-  ses_identity_ids = ["<ses-identity-id>"]
+
+  ses_identity_ids = {
+    "<ses-id>": "<ses-identity-id>"
+  }
 
   datadog_api_key                       = "<datadog-api-key>"
   datadog_site                          = "https://us3.datadoghq.com/"

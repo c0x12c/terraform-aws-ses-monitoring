@@ -3,7 +3,7 @@ resource "aws_sns_topic" "ses_notification_topic" {
 }
 
 resource "aws_ses_identity_notification_topic" "bounce" {
-  for_each = toset(var.ses_identity_ids)
+  for_each = var.ses_identity_ids
 
   topic_arn                = aws_sns_topic.ses_notification_topic.arn
   notification_type        = "Bounce"
@@ -12,7 +12,7 @@ resource "aws_ses_identity_notification_topic" "bounce" {
 }
 
 resource "aws_ses_identity_notification_topic" "complaint" {
-  for_each = toset(var.ses_identity_ids)
+  for_each = var.ses_identity_ids
 
   topic_arn                = aws_sns_topic.ses_notification_topic.arn
   notification_type        = "Complaint"
@@ -21,7 +21,7 @@ resource "aws_ses_identity_notification_topic" "complaint" {
 }
 
 resource "aws_ses_identity_notification_topic" "delivery" {
-  for_each = toset(var.ses_identity_ids)
+  for_each = var.ses_identity_ids
 
   topic_arn                = aws_sns_topic.ses_notification_topic.arn
   notification_type        = "Delivery"
@@ -112,4 +112,3 @@ resource "aws_lambda_permission" "sns_invoke_permission" {
   function_name = aws_lambda_function.this.function_name
   source_arn    = aws_sns_topic.ses_notification_topic.arn
 }
-

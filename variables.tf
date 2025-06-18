@@ -9,8 +9,9 @@ variable "environment" {
 }
 
 variable "ses_identity_ids" {
-  description = "The list of the SES outgoing identities"
-  type        = list(string)
+  description = "Map of SES identity IDs"
+  type        = map(string)
+  # Example: { "email1" = "identity1", "email2" = "identity2" }
 }
 
 variable "datadog_api_key" {
