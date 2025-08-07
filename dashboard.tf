@@ -1,6 +1,6 @@
 module "datadog_dashboard" {
   source  = "c0x12c/dashboard/datadog"
-  version = "0.1.81"
+  version = "~> 1.0.0"
 
   count = var.enabled_datadog_dashboard == true ? 1 : 0
 
