@@ -1,11 +1,11 @@
 module "main" {
   source = "../.."
 
-  environment      = "dev"
-  name             = replace("example1.com", ".", "_")
+  environment = "dev"
+  name        = replace("example1.com", ".", "_")
 
   ses_identity_ids = {
-    "<ses-id>": "<ses-identity-id>"
+    "<ses-id>" : "<ses-identity-id>"
   }
 
   datadog_api_key                       = "<datadog-api-key>"
